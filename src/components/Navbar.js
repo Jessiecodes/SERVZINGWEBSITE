@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, Router } from 'react-router-dom';
 import { MdFingerprint } from 'react-icons/md';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Button } from './Button';
 import  './Navbar.css';
 import { IconContext } from 'react-icons/lib';
-import Logo from '../images/servzing_shield.png';
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -31,8 +30,8 @@ function Navbar() {
               <div className="navbar-container container">
                   <Link to="/" className="navbar-logo"
                         onClick={closeMobileMenu}>
-                      <img src={Logo} alt="logo" width='60px' height='60px' />
-                     
+                      <MdFingerprint className="navbar-icon" />
+                      LAVISH
                   </Link>
                   <div className="menu-icon" onClick={handleClick} >
                     {click ? <FaTimes /> : <FaBars /> }
@@ -49,27 +48,29 @@ function Navbar() {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/alarms" className="nav-links">
-                          Alarms
+                        <Link to="/products" className="nav-links">
+                           Products
                         </Link>
                     </li>
-                    <li className="nav-item">
-                        <Link to="/cameras" className="nav-links">
-                          Cameras
-                        </Link>
+                    <li className="nav-btn">
+                        {button ? (
+                            <Link to='/sign-up'
+                             className="btn-link"
+                             onClick={closeMobileMenu}
+                             >
+                                <Button buttonStyle='btn--outline'>Sign Up</Button>
+                            </Link>
+                        ): (
+                            <Link to='/sign-up'
+                             className="btn-link"
+                             onClick={closeMobileMenu}
+                             >
+                                <Button buttonStyle='btn--outline'
+                                buttonSize='btn--mobile'>Sign Up</Button>
+                            </Link>
+                        )}
                     </li>
-              
-                    <li className="nav-item">
-                        <Link to="/contact" className="nav-links">
-                           Contact
-                        </Link>
-                    </li>
-                    <li>
-                        <form name="PrePage" method = "post" action = "https://Simplecheckout.authorize.net/payment/CatalogPayment.aspx" target="_blank"> <input type = "hidden" name = "LinkId" value ="3d049e1a-d97d-4d9b-98c2-fa5ac562010d" />
-                        <input type= "submit" value = "Pay My Alarm Invoice" /> 
-                        </form>
-                    </li>
-              
+
                  </ul>
               </div>
             </div>

@@ -1,11 +1,11 @@
 import React from 'react';
 import './Button.css';
 
-const STYLES = ['btn--primary', 'btn--outline', 'btn-gradient'];
+const STYLES = ['btn--primary', 'btn--outline']
 
-const SIZES = ['btn--medium', 'btn--large', 'btn--mobile', 'btn--wide'];
+const SIZES = ['btn--medium', 'btn--large', 'btn--mobile', 'btn--wide']
 
-const COLORS = ['primary', 'blue', 'red', 'green'];
+const COLORS = ['primary', 'blue', 'red', 'green']
 
 export const Button = ({
     children,
@@ -22,7 +22,7 @@ export const Button = ({
     buttonSize : SIZES[0]
 
     const checkButtonColor = COLORS.includes(buttonColor) ? 
-    buttonColor : COLORS[0];
+    buttonColor : null;
 
      return (
          <button className={`btn ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`}
