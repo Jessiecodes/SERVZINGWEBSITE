@@ -24,6 +24,19 @@
     padding-right: 50px;
     padding-left: 50px;
 }
+.phone_link  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:20px;
+}
+.phone_link a {
+  text-decoration: none;
+}
+.phone_link a:hover {
+  color: crimson;
+  transition: 3s all ease;
+}
 
 .navbar-logo {
     color: #fff;

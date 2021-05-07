@@ -23,6 +23,7 @@ function HeroSection({
         <div className='container'>
           <div
             className='row home__hero-row'
+            data-aos="fade-up" 
             style={{
               display: 'flex',
               flexDirection: imgStart === 'start' ? 'row-reverse' : 'row'

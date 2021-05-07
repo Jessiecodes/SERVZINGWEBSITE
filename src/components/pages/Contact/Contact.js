@@ -1,0 +1,70 @@
+import React, { useState } from "react";
+import './ContactUs.css';
+import { db } from "../../../firebase";
+
+function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [loader, setLoader] = useState(true);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoader(true);
+
+    db.collection("contacts")
+      .add({
+        name: name,
+        email: email,
+        message: message,
+      })
+      .then(() => {
+        setLoader(false);
+        alert("Your message has been submitted👍");
+      })
+      .catch((error) => {
+        alert(error.message);
+        setLoader(false);
+      });
+
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
+  return (
+    <form className="form" id="Contact" onSubmit={handleSubmit}>
+      <h1> Contact </h1>
+
+      <label>Name</label>
+      <input
+        placeholder="Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+
+      <label>Email</label>
+      <input
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+
+      <label>Message</label>
+      <textarea
+        placeholder="Message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+      ></textarea>
+
+      <button
+        type="submit"
+        style={{ background: loader ? "rgb(24, 204, 204);" : "rgb(24, 204, 204);" }}
+      >
+        Submit
+      </button>
+    </form>
+  );
+};
+
+export default Contact;

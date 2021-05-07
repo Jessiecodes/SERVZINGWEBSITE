@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link, Router } from 'react-router-dom';
-import { MdFingerprint } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+import { MdLockOutline, MdPermPhoneMsg } from 'react-icons/md';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Button } from './Button';
 import  './Navbar.css';
@@ -30,9 +30,14 @@ function Navbar() {
               <div className="navbar-container container">
                   <Link to="/" className="navbar-logo"
                         onClick={closeMobileMenu}>
-                      <MdFingerprint className="navbar-icon" />
-                      LAVISH
+                      <MdLockOutline className="navbar-icon" />
+                      SERVZING
                   </Link>
+                  <div class="phone_link">
+                  <a href="tel:786-287-3326" className="telephone">
+                    <MdPermPhoneMsg /> 786-287-3326
+                  </a>
+                  </div>
                   <div className="menu-icon" onClick={handleClick} >
                     {click ? <FaTimes /> : <FaBars /> }
                  </div>
@@ -50,6 +55,11 @@ function Navbar() {
                     <li className="nav-item">
                         <Link to="/products" className="nav-links">
                            Products
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/contact" className="nav-links">
+                          Contact
                         </Link>
                     </li>
                     <li className="nav-btn">
@@ -70,7 +80,6 @@ function Navbar() {
                             </Link>
                         )}
                     </li>
-
                  </ul>
               </div>
             </div>
