@@ -1,11 +1,11 @@
 export const homeObjOne = {
-    lightBg: false,
-    lightText: true,
-    lightTextDesc: true,
+    lightBg: true,
+    lightText: false,
+    lightTextDesc: false,
     topLine: 'Exclusive Access',
     headline: 'Top of the line Security Products',
     description:
-      'Get access to our exclusive diamond card that allows you to  send unlimited transactions without getting charged any fees',
+      'Get access to exclusive deals when you sign up today',
     buttonLabel: 'Get Started',
     imgStart: '',
     img: 'images/svg-1.svg',
@@ -21,8 +21,8 @@ export const homeObjOne = {
     description:
       'We have you covered no matter where you are located. Over 140 locations worldwide to ensure you have access anytime',
     buttonLabel: 'Learn More',
-    imgStart: '',
-    img: 'images/svg-5.svg',
+    imgStart: 'start',
+    img: 'images/svg-4.svg',
     alt: 'Vault'
   };
   
@@ -49,7 +49,7 @@ export const homeObjOne = {
     description:
       'Never ever have to worry again about saved reciepts. We store your data, so you can access it anytime.',
     buttonLabel: 'Sign Up Now',
-    imgStart: 'start',
+    imgStart: '',
     img: 'images/svg-8.svg',
     alt: 'Vault'
   };

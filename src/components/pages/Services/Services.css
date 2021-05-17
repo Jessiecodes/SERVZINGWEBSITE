@@ -78,3 +78,14 @@
     padding-top: 2rem;
 
 }
+.card-title {
+    margin-bottom: .75rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

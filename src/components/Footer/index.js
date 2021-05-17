@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./style.css";
 
 /**
@@ -10,6 +10,7 @@ import "./style.css";
 const Footer = (props) => {
   return (
     <div className="container-fluid" id="Footer_container">
+      <h1 className="text-center text-white pt-5">More coming soon! </h1> 
       <div
         className="flexRow flexCol justify-sb align-center"
         style={{ margin: "50px 0" }}

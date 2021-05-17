@@ -1,13 +1,20 @@
-.footer-links {
+#Footer_container{
+    background-color: #1f1f1f;
+}.footer-links {
     width: 200px;
 }
 .footer-links a {
     list-style: none;
-    color: midnightblue;
+    color: white;
+    width: 200px;
+}
+.footer-links a:hover {
+    list-style: none;
+    color: deepskyblue;
     width: 200px;
 }
 .copyright {
-    color: #000;
+    color: #999;
     text-align: center;
     font-size: 3rem;
 }

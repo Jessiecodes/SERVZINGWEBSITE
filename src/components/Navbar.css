@@ -1,6 +1,6 @@
 .navbar {
     background: #1c2237;
-    height: 80px;
+    height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,6 +68,8 @@
   
   .nav-item:hover {
     border-bottom: 2px solid #f00946;
+    text-decoration: none;
+    color: black;
   }
   
   .nav-links {
@@ -88,6 +90,10 @@
   }
   
   @media screen and (max-width: 960px) {
+    .navbar-container {
+      display: flex;
+      flex-direction: column;
+   }
     .NavbarItems {
       position: relative;
     }

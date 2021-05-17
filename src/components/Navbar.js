@@ -33,11 +33,7 @@ function Navbar() {
                       <MdLockOutline className="navbar-icon" />
                       SERVZING
                   </Link>
-                  <div class="phone_link">
-                  <a href="tel:786-287-3326" className="telephone">
-                    <MdPermPhoneMsg /> 786-287-3326
-                  </a>
-                  </div>
+             
                   <div className="menu-icon" onClick={handleClick} >
                     {click ? <FaTimes /> : <FaBars /> }
                  </div>
@@ -80,6 +76,11 @@ function Navbar() {
                             </Link>
                         )}
                     </li>
+                    <div class="phone_link">
+                  <a href="tel:786-287-3326" className="telephone">
+                    <MdPermPhoneMsg /> 786-287-3326
+                  </a>
+                  </div>
                  </ul>
               </div>
             </div>

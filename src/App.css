@@ -4,3 +4,7 @@
   padding: 0;
   font-family: 'PT Sans', sans-serif;
 }
+a:hover {
+  text-decoration: none;
+  transition: 4s all ease-in;
+}
